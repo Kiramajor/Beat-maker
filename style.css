@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+i,
+svg {
+  pointer-events: none;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+.kick-pad {
+  background: rgb(17, 17, 226);
+}
+.snare-pad {
+  background: rgb(212, 15, 120);
+}
+.hihat-pad {
+  background: rgb(240, 104, 31);
+}
+.kick-pad.active {
+  background: rgb(148, 148, 223);
+}
+.snare-pad.active {
+  background: rgb(226, 96, 165);
+}
+.hihat-pad.active {
+  background: rgb(230, 152, 110);
+}
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 70%;
+  margin: 5rem;
+}
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+.sequence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 2rem;
+}
+.controls button {
+  padding: 1rem;
+  border: none;
+  background: rgb(115, 111, 111);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+}
+.pad {
+  transition: all 0.5s ease;
+}
+.play {
+  padding: 1rem;
+  font-size: 1.5rem;
+  background: grey;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 50%;
+  margin-top: 0.1rem;
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.mute.active {
+  background: rgb(210, 203, 203);
+}
+
+.tempo {
+  margin: auto;
+  width: 30%;
+  margin-top: 15px;
+}
+
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background: grey;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.tempo p {
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
